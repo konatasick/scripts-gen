@@ -41,7 +41,7 @@ Usage
 Also, there are some built-in template identifiers (see `example/template.txt`):
 
 - `__FULL_PATH__`   : the full path of the current script
-- `__DST_FOLDER__`  : the destination folder of the current script, no trailing `'/'` or `'\\'`
+- `__DST_FOLDER__`  : the destination folder of this run, no trailing `'/'` or `'\\'`
 - `__FILE__`        : the file name of the current script
 - `__FILE_NO_EXT__` : the file name of the current script but without extension
 - `__EXT__`         : the extension of the current script
