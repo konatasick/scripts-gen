@@ -32,7 +32,7 @@ class ScriptsGen:
         try:
             with open(template_file_name, 'r') as template_file:
                 content = template_file.read()
-                content = re.sub(r'%s.+\r?\n' % comment_token, '', content)
+                content = re.sub(r'%s.*\r?\n' % comment_token, '', content)
                 content = re.sub(r'\$', '$$', content)
                 self.__template = Template(re.sub('{open_token}(.+?){close_token}'.format(open_token=open_token,
                                                                                           close_token=close_token),
