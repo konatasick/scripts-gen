@@ -7,7 +7,7 @@ The script is aiming for a handy tool when you need to test your algorithm with 
 
 Usage
 --------------------
-    $ ./scripts_gen.py --help
+    $ scripts_gen.py --help
     usage: scripts_gen.py [-h] --template FILE --save-to FOLDER --param DICT
                           --format STRING [--open TOKEN] [--close TOKEN]
                           [--comment TOKEN] [--delete]
