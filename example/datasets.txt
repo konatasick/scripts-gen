@@ -1,0 +1,11 @@
+estsp52
+hiiri
+landsat
+letter
+lvqdata
+MNIST-500
+olivettifaces
+s-data-0
+s-data-06
+segal-1-t
+timit

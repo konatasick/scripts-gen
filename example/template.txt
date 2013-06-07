@@ -1,0 +1,18 @@
+#!/bin/bash
+
+###  You can use built-in template identifers for components of the script name, including:
+###  __FULL_PATH__	  : the full path of this script
+###  __DST_FOLDER__  : the destination folder of this script, no trailing '/' or '\'
+###  __FILE__        : the file name of this script
+###  __FILE_NO_EXT__ : the file name of this script but without extension
+###  __EXT__         : the extension of this script
+
+#SBATCH -p short
+#SBATCH --qos=short
+#SBATCH -t 00:30:00
+#SBATCH -o <%__DST_FOLDER__%>/<%__FILE_NO_EXT__%>.out
+
+OUTPUT_FOLDER=/path/to/output_folder
+command="/path/to/dredviz-1.0.2/nerv --inputfile \"<%data%>.dat\" --outputfile \"$OUTPUT_FOLDER/<%__FILE_NO_EXT__%>.dat\" --lambda <%lambda%> --randinit --seed <%seed%>"
+echo "Executing $command"
+$command
