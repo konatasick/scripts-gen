@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ###  You can use built-in template identifers for components of the script name, including:
-###  __FULL_PATH__	  : the full path of this script
+###  __FULL_PATH__	 : the full path of this script
 ###  __DST_FOLDER__  : the destination folder of this script, no trailing '/' or '\'
 ###  __FILE__        : the file name of this script
 ###  __FILE_NO_EXT__ : the file name of this script but without extension
