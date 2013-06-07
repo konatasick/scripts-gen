@@ -1,8 +1,6 @@
 ScriptsGen
 ====================
 
-Overview
---------------------
 The script is aiming for a handy tool when you need to test your algorithm with different combinations of parameters. It helps to generate a text file (usually a piece of script) for each parameter combination according to a template file.
 
 Usage
