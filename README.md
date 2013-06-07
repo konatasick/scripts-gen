@@ -36,13 +36,17 @@ Usage
       --delete          Delete the contents in the destination folder.
 
 
-Also, there are some built-in template identifiers (see `example/template.txt`):
+Also, there are some built-in template identifiers for the components of the script names (see `example/template.txt`):
 
 - `__FULL_PATH__`   : the full path of the current script
 - `__DST_FOLDER__`  : the destination folder of this run, no trailing `'/'` or `'\\'`
 - `__FILE__`        : the file name of the current script
 - `__FILE_NO_EXT__` : the file name of the current script but without extension
 - `__EXT__`         : the extension of the current script
+
+In a word, 
+
+    <%__FULL_PATH__%> == <%__DST_FOLDER__%>/<%__FILE__%> == <%__DST_FOLDER__%>/<%__FILE_NO_EXT__%>.<%__EXT__%>
 
 Files
 --------------------
