@@ -42,7 +42,7 @@ Also, see `example/template.txt` for the built-in template identifiers.
 
 Files
 --------------------
-- `scripts_gen.py`: the script
+- `scripts_gen.py`: the script for Python 3.x users
 - `scripts_gen_3to2.py`: the script for Python 2.x users, where probably x>=6
 - `example/command-line.sh`: an example of command line that shows how to invoke the script
 - `example/template.txt`: an example of template file
