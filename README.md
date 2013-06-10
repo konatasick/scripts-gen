@@ -33,7 +33,7 @@ Usage
       --comment TOKEN   The token placed at the beginning of a certain line in the
                         template file that treats the line, which will be removed
                         in the scripts, as a comment. (default: ###)
-      --delete          Delete the contents in the destination folder.
+      --delete          Delete the contents in the destination folder before generating.
 
 
 Also, there are some built-in template identifiers for the components of the script names (see `example/template.txt`):
