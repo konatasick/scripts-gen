@@ -30,10 +30,11 @@ Usage
                         identifier. (default: <%)
       --close TOKEN     The token that indicates the end of a template identifier.
                         (default: %>)
-      --comment TOKEN   The token placed at the beginning of a certain line in the
-                        template file that treats the line, which will be removed
-                        in the scripts, as a comment. (default: ###)
-      --delete          Delete the contents in the destination folder before generating.
+      --comment TOKEN   The token placed in the template file that treats the rest
+                        of the line, which will be removed in the scripts, as a
+                        comment. (default: ###)
+      --delete          Delete the contents in the destination folder.
+
 
 
 Also, there are some built-in template identifiers for the components of the script names (see `example/template.txt`):

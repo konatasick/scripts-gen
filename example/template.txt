@@ -10,9 +10,12 @@
 #SBATCH -p short
 #SBATCH --qos=short
 #SBATCH -t 00:30:00
-#SBATCH -o <%__DST_FOLDER__%>/<%__FILE_NO_EXT__%>.out
+#SBATCH -o <%__DST_FOLDER__%>/<%__FILE_NO_EXT__%>.out ### Comment in the middle
 
 OUTPUT_FOLDER=/path/to/output_folder
-command="/path/to/dredviz-1.0.2/nerv --inputfile \"<%data%>.dat\" --outputfile \"$OUTPUT_FOLDER/<%__FILE_NO_EXT__%>.dat\" --lambda <%lambda%> --randinit --seed <%seed%>"
+command="/path/to/dredviz-1.0.2/nerv --inputfile \"<%data%>.dat\" \### input of NeRV, a high dimensional data
+									 --outputfile \"$OUTPUT_FOLDER/<%__FILE_NO_EXT__%>.dat\" \### NeRV result, a 2-D visualization
+									 --lambda <%lambda%> \### the trade-off parameter for NeRV
+									 --randinit --seed <%seed%>" ### a particular seed for random initialization
 echo "Executing $command"
 $command

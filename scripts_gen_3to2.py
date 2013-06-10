@@ -35,7 +35,7 @@ class ScriptsGen(object):
         try:
             with open(template_file_name, u'r') as template_file:
                 content = template_file.read()
-                content = re.sub(ur'%s.*\r?\n' % comment_token, u'', content)
+                content = re.sub(ur'(?:\r?\n)?%s.*' % comment_token, u'', content)
                 content = re.sub(ur'\$', u'$$', content)
                 self.__template = Template(re.sub(u'{open_token}(.+?){close_token}'.format(open_token=open_token,
                                                                                           close_token=close_token),
@@ -125,7 +125,7 @@ def main():
     parser.add_argument(u'--open', metavar=u'TOKEN', help=u'The token that indicates the start of a template identifier.', default=u'<%')
     parser.add_argument(u'--close', metavar=u'TOKEN', help=u'The token that indicates the end of a template identifier.', default=u'%>')
     parser.add_argument(u'--comment', metavar=u'TOKEN', help=u"""
-    The token placed at the beginning of a certain line in the template file that treats the line,
+    The token placed in the template file that treats the rest of the line,
     which will be removed in the scripts, as a comment.
     """, default=u'###')
     parser.add_argument(u'--delete', action=u'store_true', help=u'Delete the contents in the destination folder.', default=argparse.SUPPRESS)
