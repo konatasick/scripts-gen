@@ -10,7 +10,7 @@
 #SBATCH -p short
 #SBATCH --qos=short
 #SBATCH -t 00:30:00
-#SBATCH -o <%__DST_FOLDER__%>/<%__FILE_NO_EXT__%>.out ### Comment in the middle
+#SBATCH -o <%__DST_FOLDER__%>/<%__FILE_NO_EXT__%>.out
 
 OUTPUT_FOLDER=/path/to/output_folder
 command="/path/to/dredviz-1.0.2/nerv --inputfile \"<%data%>.dat\" \### input of NeRV, a high dimensional data
