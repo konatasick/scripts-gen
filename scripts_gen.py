@@ -125,7 +125,7 @@ def main():
     The token placed in the template file that treats the rest of the line,
     which will be removed in the scripts, as a comment.
     """, default='###')
-    parser.add_argument('--delete', action='store_true', help='Delete the contents in the destination folder.', default=argparse.SUPPRESS)
+    parser.add_argument('--delete', action='store_true', help='Delete the contents in the destination folder before creation.', default=False)
     args = parser.parse_args()
 
     try:
