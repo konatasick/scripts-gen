@@ -13,7 +13,6 @@ import logging
 import itertools
 from string import Template
 import argparse
-import ast
 
 
 _logger = logging.getLogger('ScriptsGen')
@@ -129,7 +128,7 @@ def main():
     args = parser.parse_args()
 
     try:
-        param_dict = ast.literal_eval(args.param)
+        param_dict = eval(args.param)
     except SyntaxError:
         _logger.error('Cannot parse the parameter dictionary %s.' % args.param)
         sys.exit(2)
